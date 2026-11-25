@@ -1,0 +1,18 @@
+node_modules/
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+.gradle/
+**/build/
+**/local.properties
+
+# Generated packages, recordings, and local device configuration
+artifacts/
+bin/
+config.json
+*.apk
+*.aab
+__pycache__/
+*.py[cod]

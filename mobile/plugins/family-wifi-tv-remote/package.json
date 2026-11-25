@@ -1,0 +1,13 @@
+{
+  "name": "capacitor-codeplay-wifi-tv-remote",
+  "version": "1.0.7-family.1",
+  "type": "module",
+  "description": "Project-local Android TV Remote v2 plugin with Sony app-link support.",
+  "license": "MIT",
+  "main": "index.js",
+  "module": "index.js",
+  "types": "index.d.ts",
+  "files": ["android", "ios", "CapacitorCodeplayWifiTvRemote.podspec", "index.js", "index.d.ts", "README.md", "package.json"],
+  "capacitor": { "android": { "src": "android" }, "ios": { "src": "ios" } },
+  "peerDependencies": { "@capacitor/core": ">=8.0.0" }
+}

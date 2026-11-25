@@ -1,0 +1,46 @@
+plugins {
+    id 'com.android.application'
+}
+
+import java.util.Properties
+
+Properties localProperties = new Properties()
+File localPropertiesFile = rootProject.file('local.properties')
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.withInputStream { localProperties.load(it) }
+}
+String familyRemoteToken = localProperties.getProperty('FAMILY_REMOTE_TOKEN')
+        ?: providers.gradleProperty('FAMILY_REMOTE_TOKEN').orNull
+        ?: providers.environmentVariable('FAMILY_REMOTE_TOKEN').orNull
+        ?: ''
+String escapedFamilyRemoteToken = familyRemoteToken.replace('\\', '\\\\').replace('"', '\\"')
+
+android {
+    namespace 'com.vivekanand.familytvcompanion'
+    compileSdk 36
+
+    defaultConfig {
+        applicationId 'com.vivekanand.familytvcompanion'
+        minSdk 24
+        targetSdk 36
+        versionCode 1
+        versionName '1.0'
+        buildConfigField 'String', 'FAMILY_REMOTE_TOKEN', "\"${escapedFamilyRemoteToken}\""
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    buildFeatures {
+        buildConfig true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Family TV Companion</string>
+    <string name="ready_message">Ready\n\nYou can return Home. The companion will keep JioTV+ shortcuts available on this TV.</string>
+</resources>

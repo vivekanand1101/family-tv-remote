@@ -1,0 +1,28 @@
+PODS:
+  - Capacitor (8.6.0):
+    - CapacitorCordova
+  - CapacitorCodeplayWifiTvRemote (1.0.7-family.1):
+    - Capacitor
+  - CapacitorCordova (8.6.0)
+
+DEPENDENCIES:
+  - "Capacitor (from `../../node_modules/@capacitor/ios`)"
+  - CapacitorCodeplayWifiTvRemote (from `../../plugins/family-wifi-tv-remote`)
+  - "CapacitorCordova (from `../../node_modules/@capacitor/ios`)"
+
+EXTERNAL SOURCES:
+  Capacitor:
+    :path: "../../node_modules/@capacitor/ios"
+  CapacitorCodeplayWifiTvRemote:
+    :path: "../../plugins/family-wifi-tv-remote"
+  CapacitorCordova:
+    :path: "../../node_modules/@capacitor/ios"
+
+SPEC CHECKSUMS:
+  Capacitor: 62cab4ab4ba04ea925576ddd1be188869e90d9ea
+  CapacitorCodeplayWifiTvRemote: 2d55a7942e45b941ca2f65f98ac83e425e3ae61b
+  CapacitorCordova: 922f0a94dae286165215f0c7cf16fbde662d5ee4
+
+PODFILE CHECKSUM: b93f512ee357d2ac6affaa7cddb91be86af5d40f
+
+COCOAPODS: 1.17.0
